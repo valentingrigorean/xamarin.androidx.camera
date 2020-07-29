@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidX.Camera2", "src\AndroidX.Camera2\AndroidX.Camera2.csproj", "{3C8943DE-E2C4-4583-816B-CE5A160A766A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidX.CameraCore", "src\AndroidX.CameraCore\AndroidX.CameraCore.csproj", "{2568CA15-7C79-48D0-A157-BFD7BBE54740}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidX.CameraExtensions", "src\AndroidX.CameraExtensions\AndroidX.CameraExtensions.csproj", "{D73B493D-6E5C-4DB3-9DE7-539EA86B6D19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidX.CameraLifecycle", "src\AndroidX.CameraLifecycle\AndroidX.CameraLifecycle.csproj", "{49F25A38-6F93-4A52-8A65-B395E201FEB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidX.CameraView", "src\AndroidX.CameraView\AndroidX.CameraView.csproj", "{B0637A12-EEC2-4C79-B79A-CF3DB3E4631F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C8943DE-E2C4-4583-816B-CE5A160A766A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C8943DE-E2C4-4583-816B-CE5A160A766A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C8943DE-E2C4-4583-816B-CE5A160A766A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C8943DE-E2C4-4583-816B-CE5A160A766A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2568CA15-7C79-48D0-A157-BFD7BBE54740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2568CA15-7C79-48D0-A157-BFD7BBE54740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2568CA15-7C79-48D0-A157-BFD7BBE54740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2568CA15-7C79-48D0-A157-BFD7BBE54740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D73B493D-6E5C-4DB3-9DE7-539EA86B6D19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D73B493D-6E5C-4DB3-9DE7-539EA86B6D19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D73B493D-6E5C-4DB3-9DE7-539EA86B6D19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D73B493D-6E5C-4DB3-9DE7-539EA86B6D19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49F25A38-6F93-4A52-8A65-B395E201FEB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F25A38-6F93-4A52-8A65-B395E201FEB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F25A38-6F93-4A52-8A65-B395E201FEB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F25A38-6F93-4A52-8A65-B395E201FEB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0637A12-EEC2-4C79-B79A-CF3DB3E4631F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0637A12-EEC2-4C79-B79A-CF3DB3E4631F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0637A12-EEC2-4C79-B79A-CF3DB3E4631F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0637A12-EEC2-4C79-B79A-CF3DB3E4631F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

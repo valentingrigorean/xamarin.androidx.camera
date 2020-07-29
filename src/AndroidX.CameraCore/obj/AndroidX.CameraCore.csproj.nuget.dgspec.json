@@ -1,0 +1,55 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/valentingrigorean/Downloads/xamarin.androidx.camera/src/AndroidX.CameraCore/AndroidX.CameraCore.csproj": {}
+  },
+  "projects": {
+    "/Users/valentingrigorean/Downloads/xamarin.androidx.camera/src/AndroidX.CameraCore/AndroidX.CameraCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/valentingrigorean/Downloads/xamarin.androidx.camera/src/AndroidX.CameraCore/AndroidX.CameraCore.csproj",
+        "projectName": "AndroidX.CameraCore",
+        "projectPath": "/Users/valentingrigorean/Downloads/xamarin.androidx.camera/src/AndroidX.CameraCore/AndroidX.CameraCore.csproj",
+        "packagesPath": "/Users/valentingrigorean/.nuget/packages/",
+        "outputPath": "/Users/valentingrigorean/Downloads/xamarin.androidx.camera/src/AndroidX.CameraCore/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/valentingrigorean/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid10.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid10.0": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid10.0": {
+          "dependencies": {
+            "Xamarin.AndroidX.Concurrent.Futures": {
+              "target": "Package",
+              "version": "[1.0.0.1, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

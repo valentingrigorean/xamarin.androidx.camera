@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "8VLCQrCKKbGZChF0mjQqReDpPBfSBr0PDigwGAFtZIxL4Hf/cs5p64mHuXlg3RY6FaBQuoUzNLpGi6p1xlKoIg==",
+  "success": true,
+  "projectFilePath": "/Users/valentingrigorean/Downloads/xamarin.androidx.camera/src/AndroidX.CameraView/AndroidX.CameraView.csproj",
+  "expectedPackageFiles": [
+    "/Users/valentingrigorean/.nuget/packages/xamarin.androidx.annotation/1.1.0.1/xamarin.androidx.annotation.1.1.0.1.nupkg.sha512",
+    "/Users/valentingrigorean/.nuget/packages/xamarin.androidx.concurrent.futures/1.0.0.1/xamarin.androidx.concurrent.futures.1.0.0.1.nupkg.sha512",
+    "/Users/valentingrigorean/.nuget/packages/xamarin.androidx.migration/1.0.0.1/xamarin.androidx.migration.1.0.0.1.nupkg.sha512",
+    "/Users/valentingrigorean/.nuget/packages/xamarin.androidx.multidex/2.0.1.1/xamarin.androidx.multidex.2.0.1.1.nupkg.sha512",
+    "/Users/valentingrigorean/.nuget/packages/xamarin.google.guava.listenablefuture/1.0.0.2/xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
