@@ -12,7 +12,7 @@
         <RootNamespace>AndroidX.CameraView</RootNamespace>
         <AssemblyName>AndroidX.CameraView</AssemblyName>
         <FileAlignment>512</FileAlignment>
-        <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+        <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
         <AndroidClassParser>class-parse</AndroidClassParser>
         <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
     </PropertyGroup>
@@ -20,7 +20,7 @@
         <DebugSymbols>true</DebugSymbols>
         <DebugType>full</DebugType>
         <Optimize>false</Optimize>
-        <OutputPath>bin\Debug\</OutputPath>
+        <OutputPath>..\..\libs\Debug</OutputPath>
         <DefineConstants>DEBUG;TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
@@ -28,7 +28,7 @@
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
         <DebugType>pdbonly</DebugType>
         <Optimize>true</Optimize>
-        <OutputPath>bin\Release\</OutputPath>
+        <OutputPath>..\..\libs\Release</OutputPath>
         <DefineConstants>TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
@@ -51,7 +51,7 @@
         <TransformFile Include="Transforms\EnumMethods.xml" />
     </ItemGroup>
     <ItemGroup>
-      <LibraryProjectZip Include="Jars\camera-view-1.0.0-alpha14.aar" />
+      <LibraryProjectZip Include="Jars\camera-view-1.0.0-alpha18.aar" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\AndroidX.CameraCore\AndroidX.CameraCore.csproj">

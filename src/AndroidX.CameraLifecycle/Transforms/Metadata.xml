@@ -1,9 +1,67 @@
 ﻿<metadata>
-  <!--
-  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
-  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
-  
-  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
-  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
-  -->
+    <!--
+    This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+    <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+    
+    This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+    <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+    -->
+    <add-node path="/api/package[@name='androidx.camera.lifecycle']">
+        <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="true" name="ProcessCameraProvider" static="false" visibility="public" jni-signature="Landroidx/camera/lifecycle/ProcessCameraProvider;">
+            <implements name="androidx.camera.lifecycle.LifecycleCameraProvider" name-generic-aware="androidx.camera.lifecycle.LifecycleCameraProvider" jni-type="Landroidx/camera/lifecycle/LifecycleCameraProvider;">
+            </implements>
+            <method abstract="false" deprecated="not deprecated" final="false" name="bindToLifecycle" jni-signature="(Landroidx/lifecycle/LifecycleOwner;Landroidx/camera/core/CameraSelector;[Landroidx/camera/core/UseCase;)Landroidx/camera/core/Camera;" bridge="false" native="false" return="androidx.camera.core.Camera" jni-return="Landroidx/camera/core/Camera;" static="false" synchronized="false" synthetic="false" visibility="public">
+                <parameter name="lifecycleOwner" type="androidx.lifecycle.LifecycleOwner" jni-type="Landroidx/lifecycle/LifecycleOwner;">
+                </parameter>
+                <parameter name="cameraSelector" type="androidx.camera.core.CameraSelector" jni-type="Landroidx/camera/core/CameraSelector;">
+                </parameter>
+                <parameter name="useCases" type="androidx.camera.core.UseCase..." jni-type="[Landroidx/camera/core/UseCase;">
+                </parameter>
+            </method>
+            <method abstract="false" deprecated="not deprecated" final="false" name="bindToLifecycle" jni-signature="(Landroidx/lifecycle/LifecycleOwner;Landroidx/camera/core/CameraSelector;Landroidx/camera/core/UseCaseGroup;)Landroidx/camera/core/Camera;" bridge="false" native="false" return="androidx.camera.core.Camera" jni-return="Landroidx/camera/core/Camera;" static="false" synchronized="false" synthetic="false" visibility="public">
+                <parameter name="lifecycleOwner" type="androidx.lifecycle.LifecycleOwner" jni-type="Landroidx/lifecycle/LifecycleOwner;">
+                </parameter>
+                <parameter name="cameraSelector" type="androidx.camera.core.CameraSelector" jni-type="Landroidx/camera/core/CameraSelector;">
+                </parameter>
+                <parameter name="useCaseGroup" type="androidx.camera.core.UseCaseGroup" jni-type="Landroidx/camera/core/UseCaseGroup;">
+                </parameter>
+            </method>
+            <method abstract="false" deprecated="not deprecated" final="false" name="bindToLifecycle" jni-signature="(Landroidx/lifecycle/LifecycleOwner;Landroidx/camera/core/CameraSelector;Landroidx/camera/core/ViewPort;[Landroidx/camera/core/UseCase;)Landroidx/camera/core/Camera;" bridge="false" native="false" return="androidx.camera.core.Camera" jni-return="Landroidx/camera/core/Camera;" static="false" synchronized="false" synthetic="false" visibility="public">
+                <parameter name="lifecycleOwner" type="androidx.lifecycle.LifecycleOwner" jni-type="Landroidx/lifecycle/LifecycleOwner;">
+                </parameter>
+                <parameter name="cameraSelector" type="androidx.camera.core.CameraSelector" jni-type="Landroidx/camera/core/CameraSelector;">
+                </parameter>
+                <parameter name="viewPort" type="androidx.camera.core.ViewPort" jni-type="Landroidx/camera/core/ViewPort;">
+                </parameter>
+                <parameter name="useCases" type="androidx.camera.core.UseCase..." jni-type="[Landroidx/camera/core/UseCase;">
+                </parameter>
+            </method>
+            <method abstract="false" deprecated="not deprecated" final="false" name="configureInstance" jni-signature="(Landroidx/camera/core/CameraXConfig;)V" bridge="false" native="false" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public">
+                <parameter name="cameraXConfig" type="androidx.camera.core.CameraXConfig" jni-type="Landroidx/camera/core/CameraXConfig;">
+                </parameter>
+            </method>
+            <method abstract="false" deprecated="not deprecated" final="false" name="getInstance" jni-signature="(Landroid/content/Context;)Lcom/google/common/util/concurrent/ListenableFuture;" bridge="false" native="false" return="com.google.common.util.concurrent.ListenableFuture&lt;androidx.camera.lifecycle.ProcessCameraProvider&gt;" jni-return="Lcom/google/common/util/concurrent/ListenableFuture&lt;Landroidx/camera/lifecycle/ProcessCameraProvider;&gt;;" static="true" synchronized="false" synthetic="false" visibility="public">
+                <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;">
+                </parameter>
+            </method>
+            <method abstract="false" deprecated="not deprecated" final="false" name="hasCamera" jni-signature="(Landroidx/camera/core/CameraSelector;)Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public">
+                <parameter name="cameraSelector" type="androidx.camera.core.CameraSelector" jni-type="Landroidx/camera/core/CameraSelector;">
+                </parameter>
+                <exception name="CameraInfoUnavailableException" type="androidx.camera.core.CameraInfoUnavailableException">
+                </exception>
+            </method>
+            <method abstract="false" deprecated="not deprecated" final="false" name="isBound" jni-signature="(Landroidx/camera/core/UseCase;)Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public">
+                <parameter name="useCase" type="androidx.camera.core.UseCase" jni-type="Landroidx/camera/core/UseCase;">
+                </parameter>
+            </method>
+            <method abstract="false" deprecated="not deprecated" final="false" name="shutdown" jni-signature="()Lcom/google/common/util/concurrent/ListenableFuture;" bridge="false" native="false" return="com.google.common.util.concurrent.ListenableFuture&lt;java.lang.Void&gt;" jni-return="Lcom/google/common/util/concurrent/ListenableFuture&lt;Ljava/lang/Void;&gt;;" static="false" synchronized="false" synthetic="false" visibility="public">
+            </method>
+            <method abstract="false" deprecated="not deprecated" final="false" name="unbind" jni-signature="([Landroidx/camera/core/UseCase;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+                <parameter name="useCases" type="androidx.camera.core.UseCase..." jni-type="[Landroidx/camera/core/UseCase;">
+                </parameter>
+            </method>
+            <method abstract="false" deprecated="not deprecated" final="false" name="unbindAll" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+            </method>
+        </class>
+    </add-node>
 </metadata>

@@ -12,7 +12,7 @@
         <RootNamespace>AndroidX.Camera2</RootNamespace>
         <AssemblyName>AndroidX.Camera2</AssemblyName>
         <FileAlignment>512</FileAlignment>
-        <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+        <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
         <AndroidClassParser>class-parse</AndroidClassParser>
         <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
     </PropertyGroup>
@@ -20,7 +20,7 @@
         <DebugSymbols>true</DebugSymbols>
         <DebugType>full</DebugType>
         <Optimize>false</Optimize>
-        <OutputPath>bin\Debug\</OutputPath>
+        <OutputPath>..\..\libs\Debug</OutputPath>
         <DefineConstants>DEBUG;TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
@@ -28,7 +28,7 @@
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
         <DebugType>pdbonly</DebugType>
         <Optimize>true</Optimize>
-        <OutputPath>bin\Release\</OutputPath>
+        <OutputPath>..\..\libs\Release</OutputPath>
         <DefineConstants>TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
@@ -51,7 +51,13 @@
         <TransformFile Include="Transforms\EnumMethods.xml" />
     </ItemGroup>
     <ItemGroup>
-      <LibraryProjectZip Include="Jars\camera-camera2-1.0.0-beta07.aar" />
+      <LibraryProjectZip Include="Jars\camera-camera2-1.0.0-beta11.aar" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\AndroidX.CameraCore\AndroidX.CameraCore.csproj">
+        <Project>{2568ca15-7c79-48d0-a157-bfd7bbe54740}</Project>
+        <Name>AndroidX.CameraCore</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
