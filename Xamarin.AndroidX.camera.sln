@@ -1,5 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidX.Camera2", "src\AndroidX.Camera2\AndroidX.Camera2.csproj", "{3C8943DE-E2C4-4583-816B-CE5A160A766A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidX.CameraCore", "src\AndroidX.CameraCore\AndroidX.CameraCore.csproj", "{2568CA15-7C79-48D0-A157-BFD7BBE54740}"
@@ -9,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidX.CameraLifecycle", "src\AndroidX.CameraLifecycle\AndroidX.CameraLifecycle.csproj", "{49F25A38-6F93-4A52-8A65-B395E201FEB3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidX.CameraView", "src\AndroidX.CameraView\AndroidX.CameraView.csproj", "{B0637A12-EEC2-4C79-B79A-CF3DB3E4631F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameraX.Sample", "src\CameraX.Sample\CameraX.Sample.csproj", "{C1D95F8E-963D-4DD9-A9FE-7921F75950DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +39,9 @@ Global
 		{B0637A12-EEC2-4C79-B79A-CF3DB3E4631F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0637A12-EEC2-4C79-B79A-CF3DB3E4631F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0637A12-EEC2-4C79-B79A-CF3DB3E4631F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D95F8E-963D-4DD9-A9FE-7921F75950DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D95F8E-963D-4DD9-A9FE-7921F75950DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D95F8E-963D-4DD9-A9FE-7921F75950DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D95F8E-963D-4DD9-A9FE-7921F75950DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
