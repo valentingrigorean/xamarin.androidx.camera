@@ -12,6 +12,7 @@
     <content url="file://$USER_HOME$/.nuget/packages/xamarin.androidx.browser/1.2.0.2/aar/androidx.browser.browser.aar" />
     <content url="file://$USER_HOME$/.nuget/packages/xamarin.androidx.cardview/1.0.0.1/aar/androidx.cardview.cardview.aar" />
     <content url="file://$USER_HOME$/.nuget/packages/xamarin.androidx.collection/1.1.0.5/jar/androidx.collection.collection.jar" />
+    <content url="file://$USER_HOME$/.nuget/packages/xamarin.androidx.concurrent.futures/1.0.0.5/jar/androidx.concurrent.concurrent-futures.jar" />
     <content url="file://$USER_HOME$/.nuget/packages/xamarin.androidx.coordinatorlayout/1.1.0.1/aar/androidx.coordinatorlayout.coordinatorlayout.aar" />
     <content url="file://$USER_HOME$/.nuget/packages/xamarin.androidx.coordinatorlayout/1.1.0.1/proguard/proguard.txt" />
     <content url="file://$USER_HOME$/.nuget/packages/xamarin.androidx.core/1.3.0.3/aar/androidx.core.core.aar" />

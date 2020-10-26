@@ -14,16 +14,24 @@ using Androidx.Camera.Lifecycle;
 using Androidx.Camera.View;
 using AndroidX.Core.Content;
 using Java.Lang;
+using Java.Util.Concurrent;
 using Xamarin.Essentials;
+using Math = System.Math;
 using Preview = Androidx.Camera.Core.Preview;
 using Toolbar = AndroidX.AppCompat.Widget.Toolbar;
 
 namespace Sample
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity, ImageCapture.IOnImageSavedCallback
+    public class MainActivity : AppCompatActivity, ImageCapture.IOnImageSavedCallback, LuminosityAnalyzer.ILumaListener
     {
         private const string TAG = nameof(MainActivity);
+
+        // ReSharper disable once InconsistentNaming
+        private const double RATIO_4_3_VALUE = 4.0 / 3.0;
+
+        // ReSharper disable once InconsistentNaming
+        private const double RATIO_16_9_VALUE = 16.0 / 9.0;
 
         private PreviewView _previewView;
 
@@ -31,18 +39,27 @@ namespace Sample
         private ImageCapture _imageCapture;
         private ICamera _camera;
 
+        private IExecutorService _cameraExecutor;
+
         private ProcessCameraProvider _cameraProvider;
+
+        public void OnFrameAnalyzed(double luma)
+        {
+            Log.Debug(TAG, $"Average luminosity: ${luma}");
+        }
 
         protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
             _previewView = FindViewById<PreviewView>(Resource.Id.preview_view);
+
+            _cameraExecutor = Executors.NewSingleThreadExecutor();
 
             if (AllPermissionsGranted())
             {
@@ -63,11 +80,17 @@ namespace Sample
             }
         }
 
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            _cameraExecutor.Shutdown();
+        }
+
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions,
-            [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+            [GeneratedEnum] Permission[] grantResults)
         {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
@@ -108,21 +131,30 @@ namespace Sample
             var cameraSelector = new CameraSelector.Builder().RequireLensFacing(CameraSelector.LensFacingBack)
                 .Build();
 
+            var aspectRatio = AspectRatio(metrics.WidthPixels, metrics.HeightPixels);
 
             _preview = new Preview.Builder()
                 .SetTargetRotation(rotation)
+                .SetTargetAspectRatio(aspectRatio)
                 .Build();
 
             _imageCapture = new ImageCapture.Builder()
                 .SetCaptureMode(ImageCapture.CaptureModeMinimizeLatency)
                 .SetTargetRotation(rotation)
+                .SetTargetAspectRatio(aspectRatio)
                 .Build();
 
+            var imageAnalyzer = new ImageAnalysis.Builder()
+                .SetTargetRotation(rotation)
+                .SetTargetAspectRatio(aspectRatio)
+                .Build();
+
+            imageAnalyzer.SetAnalyzer(_cameraExecutor, new LuminosityAnalyzer(this));
 
             _cameraProvider.UnbindAll();
             try
             {
-                _camera = _cameraProvider.BindToLifecycle(this, cameraSelector, _preview, _imageCapture);
+                _camera = _cameraProvider.BindToLifecycle(this, cameraSelector, _preview, _imageCapture, imageAnalyzer);
                 _preview.SetSurfaceProvider(_previewView.SurfaceProvider);
             }
             catch (Java.Lang.Exception ex)
@@ -131,6 +163,13 @@ namespace Sample
             }
         }
 
+        private static int AspectRatio(int width, int height)
+        {
+            var previewRatio = (double) Math.Max(width, height) / Math.Min(width, height);
+            if (Math.Abs(previewRatio - RATIO_4_3_VALUE) <= Math.Abs(previewRatio - RATIO_16_9_VALUE))
+                return Androidx.Camera.Core.AspectRatio.Ratio43;
+            return Androidx.Camera.Core.AspectRatio.Ratio169;
+        }
 
         private static int GetRotation(SurfaceOrientation rotation)
         {

@@ -60,6 +60,8 @@
         <Reference Include="System.Numerics.Vectors" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Extensions\ByteArrayExtensions.cs" />
+        <Compile Include="LuminosityAnalyzer.cs" />
         <Compile Include="MainActivity.cs" />
         <Compile Include="Resources\Resource.designer.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
