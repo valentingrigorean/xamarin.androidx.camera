@@ -1,2 +1,4 @@
 ﻿<metadata>
+    <remove-node path="/api/package[contains (@name, 'androidx.camera.camera2.internal')]" />
+
 </metadata>
